@@ -12,5 +12,5 @@ The macro will be available in open source in the coming weeks.
 ### SASTauArgus
 Ce dépôt contient la macro SAS %TAU_ARGUS utilisée pour garantir la confidentialité lors de la publication de tableaux de données. Cette macro prend en entrée une table SAS au format SAS7BDAT, crée les fichiers adéquats, et appelle le logiciel Tau-Argus afin de générer des tableaux de données protégés.  
 
-## Bientôt disponible
+### Bientôt disponible
 La macro sera disponible en open source dans les semaines à venir.

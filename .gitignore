@@ -2,5 +2,5 @@ Documentation/RESULTS
 Documentation/TEMPORARY FILES MACRO
 Documentation/*.hst
 Documentation/*.sas7bdat
-!Documentation/legumes.sas7bat
+!Documentation/legumes.sas7bdat
 Documentation/*.hrc

@@ -11,7 +11,9 @@ Si votre tableau de données ne comporte que des valeurs positives ou nulles, il
 
 ## Documentation
 Vous trouverez une documentation avec des exemples détaillés d'utilisation dans ce fichier : ["Documentation/Documentation_SASTauArgus.md"](Documentation/Documentation_SASTauArgus.md).
-Vous trouverez le code d'exemple associé à cette documentation à cette adresse : ["Documentation/Code_exemple_SASTauArgus.sas"](Documentation/Code_exemple_SASTauArgus.sas).
+Vous trouverez le code d'exemple associé à cette documentation à cette adresse : ["Documentation/Code_exemple_SASTauArgus.sas"](Documentation/Code_exemple_SASTauArgus.sas).  
+
+Les changements notables effectués en fonction des versions sont listés dans le fichier ["CHANGELOG.md"](CHANGELOG.md).
 
 ## Utilisation
 Avant toute utilisation de ces macros dans un environnement SAS, il est nécessaire de les charger en les exécutant directement, ou bien en lançant les lignes suivantes :

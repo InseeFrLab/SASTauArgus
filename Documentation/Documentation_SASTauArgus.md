@@ -63,7 +63,7 @@ filename tauargus "C:\Chemin vers le depot\SASTauArgus"; /* répertoire où se t
 ~~~
 
 
-## Le cas simple : appliquer le secret sur un tableau simple
+## Cas simple : appliquer le secret sur un tableau simple
 On souhaite diffuser un tableau ventilant le nombre de *TOMATES* par secteur d'activité regroupé en *A21* et par *PAYS*.
 ~~~
 %Tau_Argus (
@@ -73,7 +73,7 @@ tabulation_1    =      a21 pays tomates
 );
 ~~~
 
-## Le cas simple : appliquer le secret sur un tableau simple
+## Cas simple : appliquer le secret sur un tableau simple
 On souhaite diffuser un tableau ventilant le nombre de *TOMATES* par secteur d'activité regroupé en *A21* et par *PAYS*... mais on souhaite lui appliquer des règles de secret primaires particulières :
 - une dominance à 80 % maximum,
 - au moins 11 individus par case,
@@ -92,7 +92,7 @@ frequency             = 11
 
 D'autres paramètres sont disponibles pour ajuster les règles et sont bien explicités en début de programme. Les règles sont par défaut celles de la statistique d'entreprise (règle de fréquence : pas moins de trois entreprises par case ; règle de dominance : le premier contributeur de la case qui ne doit pas faire plus de 85 % du total de la case).
 
-## Le cas simple : appliquer le secret sur un tableau de comptage
+## Cas simple : appliquer le secret sur un tableau de comptage
 On souhaite diffuser un tableau ventilant le nombre d'entreprise par secteur d'activité regroupé en *A21* et par *PAYS*. Il n'y a pas dans la table sas de variable correspondant au "nombre d'entreprise", puisque chaque ligne vaut pour 1. Il suffit alors de compléter la ventilation par "freq". La règle de secret primaire de dominance ne sera alors pas appliquée, puisque non pertinente.
 ~~~
 %Tau_Argus (
@@ -102,7 +102,7 @@ tabulation_1    =      a21 pays freq
 );
 ~~~
 
-## Le cas simple : appliquer le secret sur deux tableaux liés
+## Cas simple : appliquer le secret sur deux tableaux liés
 On souhaite diffuser deux tableaux liés par leurs marges :
 - un ventilant le nombre de TOMATES par secteur d'activité regroupés en *A21* et par *PAYS*,
 - un ventilant le nombre de TOMATES par secteur d'activité regroupés en *A21* et par catégorie juridique.
@@ -118,7 +118,7 @@ tabulation_2    =      a21 CJ tomates
 Par défaut, si les variables de réponse (ici *TOMATES*) sont les mêmes pour l'ensemble des tabulations, Tau-Argus traitera le secret secondaire en mode "tableaux liés", c'est à dire que le logiciel va reconstruire le tableau regroupant toutes les ventilations concernées (ici un tableau ventilant *A21*, *PAYS* et *CJ*) pour ensuite poser le secret secondaire.  
 La limite du nombre de ventilations est de six avec l'algorithme *hypercube*, et de quatre avec les algorithmes *modular* et *optimal*.
 
-## Le cas simple : appliquer le secret sur un tableau ventilant une variable "hiérarchique"
+## Cas simple : appliquer le secret sur un tableau ventilant une variable "hiérarchique"
 On souhaite diffuser le nombre de *TOMATES* par secteur d'activité à différents niveaux d'agrégation : *A10*, *A21*, *A88*.
 ~~~
 %Tau_Argus (
@@ -146,7 +146,7 @@ hierarchical_var   =      a88
 );
 ~~~
 
-## Le cas complexe : appliquer le secret à un tableau contenant des cases négatives
+## Cas complexe : appliquer le secret à un tableau contenant des cases négatives
 On souhaite diffuser deux tableaux liés ventilant le nombre de PIZZAS  
 - par *NUTS3* et *TYPE_DISTRIB*
 - par *A88* et *NUTS*
@@ -176,7 +176,7 @@ Vi'=[ (Vi-min(Vi)) x somme(Vi)] / [ somme(Vi-min(Vi)) ]
 (Vi étant la valeur pour un individu i)  
 Les masques de secret produits présentent néanmoins la variable de réponse initiale pour faciliter les éventuels contrôles.
 
-## Le cas complexe : appliquer le secret à des tableaux liés par une variable mais pas au même niveau d'agrégation
+## Cas complexe : appliquer le secret à des tableaux liés par une variable mais pas au même niveau d'agrégation
 On souhaite diffuser les deux tableaux liés par leur marge :
 - un ventilant le nombre de *RADIS* par *NUTS3* et par type de distribution
 - un ventilant le nombre de *RADIS* par *NUTS2* et par *A88*.
@@ -232,7 +232,7 @@ tabulation_2    =      nuts3 a88 radis_round,
 
 Le secret secondaire a donc bien été fait en tableaux liés sur ces deux tabulations, et les deux variables *NUTS2* et *NUTS3* sont bien considérées comme une même variable.
 
-## Le cas complexe : des tabulations liées non par les variables de ventilation mais par les variables de réponse.
+## Cas complexe : des tabulations liées non par les variables de ventilation mais par les variables de réponse
 On souhaite diffuser les trois tableaux suivants :
 - on ventile les légumes rouges par *A88* et par *CJ*. 
 - on ventile les *SALADES* par *A88* et par *CJ*. 
